@@ -1,0 +1,72 @@
+﻿<Window x:Class="Lr_3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lr_3"
+        mc:Ignorable="d"
+        Title="Calculator" Height="600" Width="600">
+
+    <Window.Resources>
+        <Style x:Key="NumFontButton">
+            <Style.Setters>
+                <Setter Property="Control.FontFamily" Value="Times New Roman" />
+                <Setter Property="Control.FontSize" Value="30" />
+                <Setter Property="Control.Margin" Value="10" />
+                <Setter Property="Control.Background" Value="Black"/>
+                <Setter Property="Control.Foreground" Value="White" />
+            </Style.Setters>
+        </Style>
+
+        <Style x:Key="SignFontButton">
+            <Style.Setters>
+                <Setter Property="Control.FontFamily" Value="Times New Roman" />
+                <Setter Property="Control.FontSize" Value="30" />
+                <Setter Property="Control.Margin" Value="10" />
+                <Setter Property="Control.Background" Value="Black"/>
+                <Setter Property="Control.Foreground" Value="Orange" />
+            </Style.Setters>
+        </Style>
+    </Window.Resources>
+
+
+    <Grid x:Name="GroupButton" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+
+        <TextBox x:Name="text" Grid.Row="0" Grid.ColumnSpan="3" FontSize="34" Margin="25" Background="Black" Foreground="White"/>
+
+        
+
+        <Button Grid.Column="0" Grid.Row="1" Content="1" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="2" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="3" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="3" Grid.Row="1" Content="+" Style="{StaticResource SignFontButton}"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="4" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="5" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="6" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="3" Grid.Row="2" Content="-" Style="{StaticResource SignFontButton}"/>
+        <Button Grid.Column="0" Grid.Row="3" Content="7" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="8" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="2" Grid.Row="3" Content="9" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="3" Grid.Row="3" Content="*" Style="{StaticResource SignFontButton}"/>
+        <Button Grid.Column="0" Grid.Row="4" Content="=" Style="{StaticResource SignFontButton}"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="0" Style="{StaticResource NumFontButton}"/>
+        <Button Grid.Column="2" Grid.Row="4" Content="C" Style="{StaticResource SignFontButton}"/>
+        <Button Grid.Column="3" Grid.Row="4" Content="/" Style="{StaticResource SignFontButton}"/>
+        
+    </Grid>
+</Window>
